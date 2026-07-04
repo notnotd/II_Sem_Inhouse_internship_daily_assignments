@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+        img{
+            width : 100px;
+            position: absolute;
+            cursor: pointer;
+        
+
+        }
+
+    </style>
+</head>
+<body>
+    <p>Apple:<span id="apple">0</span></p>
+    <p>banana<span id="banana">0</span></p>
+    <img src="images.png" alt="" onclick="clickImage('apple',this)">
+    <img src="banana-7h4m9.webp" alt="" onclick="clickImage('banana',this)">
+    <div class="container mt-4 text-center">
+    <h3>Time Left</h3>
+    <h2 id="timer" class="text-danger">00:15</h2>
+</div>
+    <script>
+        let apple = 0,banana =0;
+        document.querySelectorAll("img").forEach(img =>{
+            img.style.left = Math.random()*(window.innerWidth-100)+"px";
+            img.style.top = Math.random()*(window.innerHeight-120)+"px";
+        });
+        function clickImage(type,img){
+            if(type=="apple"){
+                document.getElementById("apple").innerText=++apple;
+            }else{
+                document.getElementById("banana").innerText=++banana;
+            }
+             img.style.left = Math.random()*(window.innerWidth-100)+"px";
+            img.style.top = Math.random()*(window.innerHeight-120)+"px";
+        }
+        let time = 15;
+
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(function () {
+
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+
+    timer.innerHTML = ` ${minutes}:${seconds}`;
+
+    time--;
+
+    if (time < 0) {
+        clearInterval(countdown);
+
+        timer.innerHTML = "Time Over!";
+        alert("Game Over!");
+
+        
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 3000 );
+    }
+
+}, 1000);
+    </script>
+</body>
+</html>
