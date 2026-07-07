@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>registration</title>
+</head> 
+<body>
+
+  <div id="diiv">
+    
+    <form  class="" action="registration.php" method="post" enctype="multipart/form-data" >
+        <h1>Registration Form</h1>
+        <label >
+         <h4>Enter Name</h4>
+         <br>
+         <input type="text" name="name" id="NAME" placeholder="enter your name">
+        </label>  
+ <br>
+        <label >
+             <h4>Enter Email</h4>
+        <input type="email" name="email" id= "" placeholder="enter your email">
+        </label>
+    <br>
+        
+        <div class="flex-row">
+        <label >
+             <h4>Enter Number</h4>
+        <input type="number" name="number" id="" placeholder="enter your phone">
+        </label>
+        <label>
+             <h4>Birth Date</h4>
+      <input type="date" name="DOB" id="">
+        </label>
+        </div>
+        
+        <br>
+        <label>     
+            <h4>Gender</h4>
+            <input type="radio" name="gender" id="chmale">
+            male
+        </label>
+        
+          <label>   
+            <input type="radio" name="gender" id="check_female">
+           female
+        </label>
+    <label>
+            <input type="radio" name="gender" id="check_no">
+          prefer not to say
+        </label>
+ <br>
+         <label>
+            <h4>Address</h4>
+         <input type="text" name="add1" placeholder="enter street address" class="address-margin">
+         </label>
+         <br>
+          <label>
+         <input type="text" name="add2" placeholder="enter street address line 2">
+         </label>
+          <br>
+ 
+         <div class="flex-row">
+         <select name="country">
+            <option value="" selected hidden>country</option>
+            <option>india</option>
+            <option>UK</option>
+            <option>Iran</option>
+            <option>Bhutan</option>
+         </select>
+         <select name="branch" id="">
+          <option value="" selected hidden>Branch</option>
+            <option>Ai</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>IT</option>
+         </select>
+         <label>
+            <input type="text" placeholder="city" name="addc">
+         </label>
+         </div>
+         <br>
+         
+         <div class="flex-row">
+           <label>
+            <input type="text" placeholder="region" name="region">
+         </label>
+           <label>
+            <input type="number" placeholder="postal code" name="pin">
+         </label>
+         </div>
+         <input type="file"    accept="image/*" required  name = "myfile" size="20mb">
+         
+           <br>
+           <button type="submit" id="btn" name="submit"> Submit</button>
+    </form>
+    </div>
+</body>
+</html>
